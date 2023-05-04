@@ -1,0 +1,651 @@
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+
+/*
+
+    0.  Includes
+    1.  Icons
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Third Party Elements
+    7.  Pagination
+    8.  Footer
+    9.  Media Queries (Tablet)
+    10. Media Queries (Mobile)
+
+ */
+
+/* ==========================================================================
+   0. Includes - Ground zero
+   ========================================================================== */
+
+@import url(normalize.css);
+
+
+/* ==========================================================================
+   1. Icons - Sets up the icon font and respective classes
+   ========================================================================== */
+
+/* Import the font file with the icons in it */
+@font-face {
+    font-family: 'icons';
+    src:url('../fonts/icons.eot');
+    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icons.woff') format('woff'),
+        url('../fonts/icons.ttf') format('truetype'),
+        url('../fonts/icons.svg#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+.icon-ghost:before, 
+.icon-feed:before, 
+.icon-twitter:before, 
+.icon-google-plus:before, 
+.icon-facebook:before {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+/* Each icon is created by inserting the corret character into the 
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+    content: "\e000";
+}
+.icon-feed:before {
+    content: "\e001";
+}
+.icon-twitter:before {
+    content: "\e002";
+    font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\e003";
+}
+.icon-facebook:before {
+    content: "\e004";
+}
+
+
+/* ==========================================================================
+   2. General - Setting up some base styles
+   ========================================================================== */
+
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+
+    font-size: 2.0rem;
+    color: #8A8B8B;
+
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+    font-family: 'Noto Serif', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 1.2em;
+    letter-spacing: -2px;
+    text-indent: -3px;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    text-indent: -2px;
+}
+
+h3 {
+    font-size: 3.5rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+h5 {
+    font-size: 2.5rem;
+}
+
+h6 {
+    font-size: 2rem;
+}
+
+a {
+    color: #4a4a4a;
+    transition: color ease 0.3s;
+}
+
+
+
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+    color: #50585D;
+}
+
+
+.content p,.content ul,.content ol,.content dl
+{
+    margin: 1.6em 0 !important;
+}
+.content img
+{
+    margin: 1.6em 0 0 0 !important;
+    width: 100%;
+}
+#botones 
+{
+    margin: 1.6em 0  !important;
+}
+ 
+
+dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em
+}
+
+dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #efefef;
+    margin: 3.2em 0;
+    padding: 0;
+}
+
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0 1.6em -2.2em;
+    padding: 0 0 0 1.6em;
+    border-left: #4a4a4a 0.4em solid;
+}
+
+blockquote p {
+    margin: 0.8em 0;
+    font-style: italic;
+}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size:0.9em;
+    color: #ccc;
+}
+
+blockquote small:before { content: '\2014 \00A0'; }
+
+blockquote cite {
+    font-weight:bold;
+}
+
+blockquote cite a { font-weight: normal; }
+
+mark {
+    background-color: #ffc336;
+}
+
+code, tt {
+    padding: 1px 3px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.85em;
+    white-space: pre-wrap;
+    border: 1px solid #E3EDF3;
+    background: #F7FAFB;
+    border-radius: 2px;
+}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #E3EDF3;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #F7FAFB;
+    border-radius: 3px;
+}
+
+pre code, tt {
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+kbd {
+    display: inline-block;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    border: #ccc 1px solid;
+    color: #666;
+    text-shadow: #fff 0 1px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.2), 
+        0 1px 0 0 #fff inset;
+}
+
+table {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width:100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+
+table th,
+table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #efefef;
+}
+
+table th { color: #000; }
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+table tbody + tbody { border-top: 2px solid #efefef; }
+
+table table table { background-color: #fff; }
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+    background-color: #f6f6f6;
+}
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+   background: transparent;
+}
+
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+    position: relative;
+    width:60%;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+    border-bottom: #EBF2F6 1px solid;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+
+
+.post-title {
+    margin:0;
+}
+
+.post-title a {
+    text-decoration: none;
+}
+
+.post-excerpt p {
+    margin: 1.6rem 0 0 0;
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
+
+.post-meta {
+    display: inline-block;
+    margin: 0 0 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #9EABB3;
+}
+
+.post-meta a {
+    color: #9EABB3;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+
+    blockquote {
+        margin-left: 0;
+    }
+
+    .site-head {
+        -webkit-box-sizing: border-box; 
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; 
+        height: auto;
+        min-height: 240px;
+        padding: 15% 0;
+    }
+
+    .blog-title {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .blog-description {
+        font-size: 1.7rem;
+        line-height: 1.5em;
+    }
+
+    .post {
+        font-size: 0.9em;
+        line-height: 1.6em;
+    }
+
+    .post-template .post {
+        padding-bottom: 1rem;
+    }
+
+    .post-template .post-header {
+        padding: 40px 0;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        font-size: 3.8rem;
+    }
+
+    h3 {
+        font-size: 3.3rem;
+    }
+
+    h4 {
+        font-size: 2.8rem;
+    }
+
+}
+
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 500px) {
+
+    .blog-logo img {
+        max-height: 80px;
+    }
+
+    .inner, 
+    .pagination {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .post {
+        width:auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 0.8em;
+        line-height: 1.6em;
+    }
+
+    .site-head {
+        padding: 10% 0;
+    }
+
+    .blog-title {
+        font-size: 3rem;
+    }
+
+    .blog-description {
+        font-size: 1.5rem;
+    }
+
+
+    h1, h2 {
+        font-size: 3rem;
+        line-height: 1.1em;
+        letter-spacing: -1px;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+
+    h4 {
+        font-size: 2.3rem;
+    }
+
+    .post-template .post {
+        padding-bottom: 0;
+    }
+
+    .post-template .post-header {
+        padding: 30px 0;
+    }
+
+    .post-meta {
+        font-size: 1.3rem;
+    }
+
+    .post-footer {
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .post-footer .author {
+        margin: 0 0 2rem 0;
+        padding: 0 0 1.6rem 0;
+        border-bottom: #EBF2F6 1px dashed;
+    }
+
+    .post-footer .share {
+        position: static;
+        width: auto;
+    }
+
+    .post-footer .share a {
+        margin: 1.4rem 0.8rem 0 0.8rem;
+    }
+
+    .older-posts,
+    .newer-posts {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .page-number {
+        display: block;
+    }
+
+    .site-footer {
+        margin-top: 6rem;
+        font-size: 1.1rem;
+    }
+
+}
+
+/* ==========================================================================
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point, or it will probably fuck everything up.
+   ========================================================================== */
+
+
+#my_custom_link_index {
+    color: white;
+}
+
+
+#my_custom_link_post {
+    color: black;
+}
+
+
+
+p img
+{
+    width: 100%;
+}
+.content
+{
+    font-family: 'Noto Serif', serif;
+}
+
+#slide
+{
+    margin: 1em 0;
+}
+@media screen and (min-width: 1210px) {
+
+}
+#mode
+{
+    font-family: sans-serif;
+
+}
+#mode li
+{
+    display: inline-block;
+    margin: 0 1em;
+} 
+#mode li a
+{
+    color: #bbb;
+    font-size: 23px;
+} 
+#mode ul
+{
+    margin: 6px 0 0 0 !important;
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+}
+@media screen and (max-width: 470px){
+    #mode li
+{
+    display: block;
+    margin: 0.5em 1em;
+} 
+    
+}
+pre
+{
+    font-size: 16px;
+}
+
+.reading
+{
+    color: rgb(99, 99, 102) !important
+}
+#botones {
+background-color: #ecf0f1;
+box-shadow: 0 6px 0 #bdc3c7;
+display: inline-block;
+float: right;
+height: 72px;
+
+vertical-align: top;
+width: 100%;
+position: relative;
+border-radius: 3px;
+}
+
+#botones #down
+{
+
+    border-radius: 3px;
+    border: none;
+    display: inline-block;
+    font-size: 25px;
+    margin:  5px auto;
+    padding: 10px 3%;
+    width: 66%;
+    font-family: "Noto Serif"
+}
+#botones #gith
+{
+    font-family: FontAwesome;
+    border-radius: 3px;
+    border: none;
+    display: inline-block;
+    font-size: 34px;
+    margin:  5px auto;
+    padding: 10px 3%;
+    width: 20%;
+    left: 74%;
+}
+#botones #gith:before
+{
+    
+    content:"\e61e"
+}
+
+#botones button
+{
+    background-color: #fff;
+    box-shadow:  0 6px 0  #bdc3c7;
+    color:#bdc3c7;
+    position: absolute;
+    bottom: 7px;
+    left: 6%;
+}
+  
+#botones button:active
+{
+  background-color: #E3E6E7;
+  bottom: 1px;
+  border-width: 0;
+  outline: none;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.4), 0 2px #ecf0f1;
+}
+#botones button:focus
+{
+    outline:0.1px solid #bdc3c7;
+}
+

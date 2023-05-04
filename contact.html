@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>contact me :)</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<script src="prefixfree.min.js"></script>
+
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="animate.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<link rel="stylesheet" href="responsive nav/responsive-nav.css">
+    <script src="responsive nav/responsive-nav.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/modal/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/modal/component.css" />
+	<script src="js/modal/modernizr.custom.js"></script>
+
+	<link href="cosas/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="cosas/froala_editor.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body style="overflow:scroll">
+	<div class="md-modal md-effect-1" id="modal-1">
+		<div class="md-content">
+			<div>
+				<div id="content">
+			    <div class="content-box">
+			      <!-- jQuery UI -->
+			      <script type="text/javascript" src="./lib/jquery.ui.core.1.10.3.min.js"></script>
+			      <script type="text/javascript" src="./lib/jquery.ui.widget.1.10.3.min.js"></script>
+			      <script type="text/javascript" src="./lib/jquery.ui.mouse.1.10.3.min.js"></script>
+			      <script type="text/javascript" src="./lib/jquery.ui.draggable.1.10.3.min.js"></script>
+			      
+			      <!-- wColorPicker -->
+			      <link rel="Stylesheet" type="text/css" href="./lib/wColorPicker.min.css" />
+			      <script type="text/javascript" src="./lib/wColorPicker.min.js"></script>
+
+			      <!-- wPaint -->
+			      <link rel="Stylesheet" type="text/css" href="./wPaint.min.css" />
+			      <script type="text/javascript" src="./wPaint.min.js"></script>
+			      <script type="text/javascript" src="./plugins/main/wPaint.menu.main.min.js"></script>
+			      <script type="text/javascript" src="./plugins/text/wPaint.menu.text.min.js"></script>
+			      <script type="text/javascript" src="./plugins/shapes/wPaint.menu.main.shapes.min.js"></script>
+			      <script type="text/javascript" src="./plugins/file/wPaint.menu.main.file.min.js"></script>
+
+			      <div id="wPaint" style="position:relative; width:500px; height:200px; background-color:#7a7a7a; margin:60px auto;"></div>
+			      <div style="position:relative; width:500px; height:200px; margin:20px auto;"><img id="wPaint-img" src=""/></div>
+
+			      <script type="text/javascript">
+			        var images = [
+			          '/test/uploads/wPaint.png',
+			        ];
+
+			        function saveImg(image) {
+			          var _this = this;
+
+			          $.ajax({
+			            type: 'POST',
+			            url: '/test/upload.php',
+			            data: {image: image},
+			            success: function (resp) {
+
+			              // internal function for displaying status messages in the canvas
+			              _this._displayStatus('Image saved successfully');
+
+			              // doesn't have to be json, can be anything
+			              // returned from server after upload as long
+			              // as it contains the path to the image url
+			              // or a base64 encoded png, either will work
+			              resp = $.parseJSON(resp);
+
+			              // update images array / object or whatever
+			              // is being used to keep track of the images
+			              // can store path or base64 here (but path is better since it's much smaller)
+			              images.push(resp.img);
+
+			              // do something with the image
+			              $('#wPaint-img').attr('src', image);
+			            }
+			          });
+			        }
+
+			        function loadImgBg () {
+
+			          // internal function for displaying background images modal
+			          // where images is an array of images (base64 or url path)
+			          // NOTE: that if you can't see the bg image changing it's probably
+			          // becasue the foregroud image is not transparent.
+			          this._showFileModal('bg', images);
+			        }
+
+			        function loadImgFg () {
+
+			          // internal function for displaying foreground images modal
+			          // where images is an array of images (base64 or url path)
+			          this._showFileModal('fg', images);
+			        }
+
+			        // init wPaint
+			        $('#wPaint').wPaint({
+			          menuOffsetLeft: -35,
+			          menuOffsetTop: -50,
+			          saveImg: saveImg,
+			          loadImgBg: loadImgBg,
+			          loadImgFg: loadImgFg
+			        });
+			      </script>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+		
+	<header>
+		<figure>
+			<object type="image/svg+xml" data="logo.svg"><img src="logo.png" alt=""></object>
+		</figure>
+		<div id="navegacion">
+			<nav class="nav-collapse">
+				<ul>
+					<li><a href="index.html" title="home" >home</a></li>
+					<li id="blog_bp"><a href="blog.html"title="blog" >blog</a></li>
+					<li><a href="portfolio.html" title="portfolio">portfolio</a></li>
+					<li><a href="contact.html" title="contact">contact me</a></li>
+				</ul>
+			</nav>
+			<section id="social">
+				<a href="https://www.facebook.com/Holamama1234" target="_blank">
+					<aside id="fb"></aside>
+				</a>
+				<a href="https://twitter.com/soyluisgallego" target="_blank">
+					<aside id="tt"></aside>
+				</a>
+				<a href="https://www.youtube.com/user/MrCornStudios" target="_blank">
+					<aside id="yt"></aside>
+				</a>
+				<a href="https://github.com/luisgallego" target="_blank">
+					<aside id="gh"></aside>
+				</a>
+			</section>
+		</div>
+	</header>
+	<div id="form_container">
+		<h2 id="titulo">Let's do something Epic...</h2>
+		<form action=""  id="form">
+
+			<input name="fullname" type="text" id="name" placeholder="Give me your name">
+			<input type="email" id="email" placeholder="And your hot email">
+			<div id="text_area">
+				<section id="editor">
+     					 <div id='edit' style="margin-top: 30px;"></div>
+  				</section>
+				
+			</div>
+		</form>
+	</div>
+
+
+
+
+
+  	<script src="js/upload.js"></script>
+
+	<div class="md-overlay"></div><!-- the overlay element -->
+	<button class="md-trigger" data-modal="modal-1"></button>
+	<script src="js/modal/classie.js"></script>
+	<script src="js/modal/modalEffects.js"></script>
+	<script>
+	
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
+	<script>
+		  	var nav = responsiveNav(".nav-collapse",{ // Selector
+			animate: true, // Boolean: Use CSS3 transitions, true or false
+			transition: 300, // Integer: Speed of the transition, in milliseconds
+			label: "", // String: Label for the navigation toggle
+			insert: "before", // String: Insert the toggle before or after the navigation
+			customToggle: "", // Selector: Specify the ID of a custom toggle
+			openPos: "static", // String: Position of the opened nav, relative or static
+			jsClass: "js", // String: 'JS enabled' class which is added to <html> el
+			init: function(){}, // Function: Init callback
+			open: function(){}, // Function: Open callback
+			close: function(){} // Function: Close callback
+
+			});
+			
+		</script>
+		<script type="text/javascript">
+			$('#img_up').click(function(){
+		    	$('.img_input_hidden').click();
+			});
+			$('#draw').click(function(){
+		    	$('.md-trigger').click();
+			});
+
+			var seguirToggle = true;
+		    $(document).ready(function()
+		    {
+		        $("#name").click(function () {     
+		        	if (seguirToggle) {
+			            $('#email').addClass("animated fadeInDown");
+			            $('#mensaje').addClass("animated outDown");
+			            $('#img_up').addClass("animated outDown");
+			            $('#draw').addClass("animated outDown");
+			            $( "#email" ).css( "display", "block" );
+			            seguirToggle = false;
+		        	}
+		            });
+		    });
+		</script>
+		
+
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="js/froala_editor.min.js"></script>
+
+  <script>
+      $(function(){
+          $('#edit').editable({inlineMode: false})
+      });
+  </script>
+</body>
+</html>
