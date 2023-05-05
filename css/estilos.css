@@ -19,11 +19,11 @@
 
 @font-face {
 	font-family: FontAwesome;
-	src:url('font/fonts/icomoon.eot?-mi6o5j');
-	src:url('font/fonts/icomoon.eot?#iefix-mi6o5j') format('embedded-opentype'),
-		url('font/fonts/icomoon.woff?-mi6o5j') format('woff'),
-		url('font/fonts/icomoon.ttf?-mi6o5j') format('truetype'),
-		url('font/fonts/icomoon.svg?-mi6o5j#icomoon') format('svg');
+	src:url('/font/fonts/icomoon.eot?-mi6o5j');
+	src:url('/font/fonts/icomoon.eot?#iefix-mi6o5j') format('embedded-opentype'),
+		url('/font/fonts/icomoon.woff?-mi6o5j') format('woff'),
+		url('/font/fonts/icomoon.ttf?-mi6o5j') format('truetype'),
+		url('/font/fonts/icomoon.svg?-mi6o5j#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -33,38 +33,35 @@
 
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot');
-	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.woff') format('woff'),
-		url('fonts/icomoon.ttf') format('truetype'),
-		url('fonts/icomoon.svg#icomoon') format('svg');
+	src:url('/fonts/icomoon.eot');
+	src:url('/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/icomoon.woff') format('woff'),
+		url('/fonts/icomoon.ttf') format('truetype'),
+		url('/fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'icomoon2';
-	src:url('icons/fonts/icomoon.eot');
-	src:url('icons/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('icons/fonts/icomoon.woff') format('woff'),
-		url('icons/fonts/icomoon.ttf') format('truetype'),
-		url('icons/fonts/icomoon.svg#icomoon') format('svg');
+	src:url('/icons/fonts/icomoon.eot');
+	src:url('/icons/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('/icons/fonts/icomoon.woff') format('woff'),
+		url('/icons/fonts/icomoon.ttf') format('truetype'),
+		url('/icons/fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'icomoon3';
-	src:url('masiconos/fonts/icomoon.eot');
-	src:url('masiconos/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('masiconos/fonts/icomoon.ttf') format('truetype'),
-		url('masiconos/fonts/icomoon.woff') format('woff'),
-		url('masiconos/fonts/icomoon.svg#icomoon') format('svg');
+	src:url('/masiconos/fonts/icomoon.eot');
+	src:url('/masiconos/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('/masiconos/fonts/icomoon.ttf') format('truetype'),
+		url('/masiconos/fonts/icomoon.woff') format('woff'),
+		url('/masiconos/fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
-*:not(.fa,header)
-{
-	color: #9B9B9B
-}
+
 ::selection {
     color: #222;
     background: #D6EDFF;
@@ -139,6 +136,8 @@ header nav
 	margin:1em 0 6px 0;
 	box-shadow:  0 6px 0  #bdc3c7;
 	padding-bottom:  6px;
+	position: relative;
+	padding-bottom: 70px;
 }
 
 header #social
@@ -175,6 +174,17 @@ header #social #tt:before
 header #social #yt:before
 {
 	content:"\e61b"
+}
+header #social #ll
+{
+	background-image: url( '/fonts/liril.png' );
+	width: 36px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-position-y: 5px;
+
 }
 header #social #gh:before
 {
@@ -274,7 +284,8 @@ header figure img
 	display: none;
 }
 #registro input,
-#registro button
+#registro button,
+button#send
 {
 	background-color: #fff;
 	border-radius: 3px;
@@ -324,6 +335,18 @@ header figure img
 	position: absolute;
 	bottom: 7px;
 }
+button#send
+{
+	background-color: #fff;
+	box-shadow: 0 6px 0 #bdc3c7;
+	color: #9B9B9B;
+	position: absolute;
+	bottom: 7px;
+	width: 50%;
+	margin-left: 25%;
+	box-sizing: border-box;
+	cursor: pointer;
+}
 #signUp
 {
 	left: 6%;
@@ -350,6 +373,14 @@ header figure img
 	content: "\e630";	
 }
 #registro button:active
+{
+  background-color: #E3E6E7;
+  bottom: 1px;
+  border-width: 0;
+  outline: none;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.4), 0 2px #ecf0f1;
+}
+button#send:active
 {
   background-color: #E3E6E7;
   bottom: 1px;
@@ -884,4 +915,7 @@ header #social
 a:hover .l
 {
 	text-decoration: underline;
+}
+.hiddenForm{
+	display: none
 }

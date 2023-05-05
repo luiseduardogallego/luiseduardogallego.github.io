@@ -285,7 +285,18 @@ header figure img
 	display: none;
 }
 #registro input,
-#registro button
+#registro button,
+button#send
+{
+	background-color: #fff;
+	border-radius: 3px;
+	border: none;
+	display: block;
+	font-size: 25px;
+	margin:  0.2em auto;
+	padding: 10px 3%;
+	width: 88%;
+}
 {
 	background-color: #fff;
 	border-radius: 3px;
@@ -335,6 +346,18 @@ header figure img
 	position: absolute;
 	bottom: 7px;
 }
+button#send
+{
+	background-color: #fff;
+	box-shadow: 0 6px 0 #bdc3c7;
+	color: #9B9B9B;
+	position: absolute;
+	bottom: 7px;
+	width: 50%;
+	margin-left: 25%;
+	box-sizing: border-box;
+	cursor: pointer;
+}
 #signUp
 {
 	left: 6%;
@@ -361,6 +384,14 @@ header figure img
 	content: "\e630";	
 }
 #registro button:active
+{
+  background-color: #E3E6E7;
+  bottom: 1px;
+  border-width: 0;
+  outline: none;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.4), 0 2px #ecf0f1;
+}
+button#send:active
 {
   background-color: #E3E6E7;
   bottom: 1px;
@@ -897,4 +928,7 @@ header #social
 a:hover .l
 {
 	text-decoration: underline;
+}
+.hiddenForm{
+	display: none
 }
