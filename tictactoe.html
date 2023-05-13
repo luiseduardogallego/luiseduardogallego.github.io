@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="es-419">
+<head>
+	<meta charset="UTF-8">
+	<title>Triqui! (tic tac toe)</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<script src="prefixfree.min.js"></script>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="css/articulo.css">
+		<link rel="stylesheet" href="animate2.css">
+	<link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">
+
+	<script src="js/modernizr.custom.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" href="css/iview.css" />
+		<link rel="stylesheet" href="css/skin 4/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/estilos.css">
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/raphael-min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.js"></script>
+		<script src="js/iview.js"></script>
+		<link rel="stylesheet" href="responsive nav/responsive-nav.css">
+    <script src="responsive nav/responsive-nav.js"></script>
+    <script src="js/codigo.js"></script>
+    <link href="css/prism.css" rel="stylesheet" />
+    
+    <script src="js/jquery.sticky-kit.min.js"></script>
+
+	<link href="cosas/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+	<header>
+		<figure>
+			<object id="luis" type="image/svg+xml" data="logo.svg"><img src="logo.png" alt=""></object>
+		</figure>
+		<div id="navegacion">
+			<nav class="nav-collapse">
+				<ul id="ul">
+					<li><a href="index.html" title="home" >home</a></li>
+					<li id="blog_bp"><a href="blog.html"title="blog" >blog</a></li>
+					<li><a href="portfolio.html" title="portfolio">portfolio</a></li>
+					<li><a href="contact.html" title="contact">contact me</a></li>
+				</ul>
+			</nav>
+			<section id="social">
+				<a href="https://www.facebook.com/Holamama1234" target="_blank">
+					<aside id="fb"></aside>
+				</a>
+				<a href="https://twitter.com/soyluisgallego" target="_blank">
+					<aside id="tt"></aside>
+				</a>
+				<a href="https://www.youtube.com/user/MrCornStudios" target="_blank">
+					<aside id="yt"></aside>
+				</a>
+				<a href="https://github.com/luisgallego" target="_blank">
+					<aside id="gh"></aside>
+				</a>
+			</section>
+		</div>
+	</header>
+	<aside id="mode">
+		<nav>
+			<ul>
+				<li>
+					<a href="#" id="full" class="reading">
+						Full Tut
+					</a>
+				</li>
+				<li>
+					<a href="#" id="basic">
+						Basic Tut
+					</a>
+				</li>
+				<li>
+					<a href="#" id="source">
+						Source Code
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+<main class="content" role="main">
+	<article class="post">
+	<section id="fullTut">
+		<span class="post-meta"><time datetime="2014-04-07">07 Apr 2014</time></span>
+		<h1 class="post-title">¿Cómo hacer un juego de triqui en HTML5?</h1>
+		<section class="post-content">
+			<img src="/photos/Kka1on142IOdi2/triqui_poster.jpg" alt="Una partida de triqui en que ganó la equis">
+			<p>
+				Para aprender algo si estás muy básico en el HTML5 <span class="icon-html-five"></span>, perfecto; vamos a aprender a hacer un juego de <i>triqui</i> o <i>tic tac toe</i> con HTML básico, y también CSS y Javascript que entenderás hasta si no sabías nada de esto.
+			</p>
+			<p>
+				Este es el tutorial completo, puedes ver el tutorial resumido y sólo el código, si quieres, dándole click a alguna de las tres pestañas de arriba del todo de la página.
+			</p>
+			<br>
+			<p>
+				Vamos a empezar por explicar el juego. <i>Triqui</i> o <i>tic tac toe</i>, es un juego de cuaderno conocido de hace mucho por todos,
+				primero, dibujas una cuadrícula con o sin bordes de 3 por 3..:
+			</p>
+			<img src="/photos/Kka1on142IOdi2/triqui.jpg" alt="Imagen hecha a mano pero con un computador de una cuadrícula de tres por tres sin bordes negra sobre un fondo blanco">
+			<p>Es indispensable que hayan, y además sólo, dos jugadores... deciden cuál va a comenzar de alguna manera y éste dibuja la equis en cualquiera de las nueve casillas disponibles:</p>
+			<img src="/photos/Kka1on142IOdi2/triqui1.jpg" alt="La misma cuadrícula de la imagen anterior con una equis dibujada en la primera columna en la segunda fila">
+			<p>Sigue el otro jugador, dibujando circunferencias o bolas, y se iran turnando sucesivamente hasta que uno de ellos dibuje tres de su símbolo seguidos en una de las tres filas o una de las tres columnas, o en una de las dos diágonales.</p>
+			<img src="/photos/Kka1on142IOdi2/triqui2.jpg" alt="La misma cuadrícula de la imagen anterior con una equis dibujada en la primera columna en la segunda fila">
+			<img class= "halfwidth" src="/photos/Kka1on142IOdi2/triqui3.jpg" alt="La misma cuadrícula de la imagen anterior con una equis dibujada en la primera columna en la segunda fila">
+			<img class= "halfwidth" src="/photos/Kka1on142IOdi2/triqui4.jpg" alt="La misma cuadrícula de la imagen anterior con una equis dibujada en la primera columna en la segunda fila">
+			<img class= "halfwidth" src="/photos/Kka1on142IOdi2/triqui5.jpg" alt="La misma cuadrícula de la imagen anterior con una equis dibujada en la primera columna en la segunda fila">
+			<img class= "halfwidth" src="/photos/Kka1on142IOdi2/triqui6.jpg" alt="La misma cuadrícula de la imagen anterior con una equis dibujada en la primera columna en la segunda fila">
+
+			<h3 id="useconstraints">Bueno...</h3>
+
+			<p>ya entendimos el juego, podría ganar cualquiera o ninguno. Ahora vamos a programarlo; empecemos por el HTML, creemos en una carpeta vacía un archivo llamado <i class="code">index.html</i>.</p>
+			<p>Primero que nada, tenemos que maquetar el documento HTML básico:</p>
+<div class="parent">
+	<div class="stScroll">
+	    <div class="ensanchador"></div>
+	</div>
+	<pre data-src="/resources/Kka1on142IOdi2/triqui.html"></pre>
+</div>
+		<p>Esto es lo mismo en el caso de cualquier documento HTML, en la etiqueta <i class="code">&lt;title&gt;&lt;/title&gt;</i> pusimos el nombre del documento.</p>
+			<p>Ahora, tenemos que maquetar la cuadrícula. Hagamos nueve cajas que puedan contener cosas (una equis o una circunferencia), a su vez dentro de una caja. Un <i class="code">&lt;div&gt;&lt;/div&gt;</i> es una etiqueta de HTML, justo para esto, además. Una etiqueta de HTML debe abrirse y cerrarse y puede contener texto y/u otras etiquetas de HTML que a su vez deben abrirse y cerrarse.</p>
+<div class="parent">
+	<div class="stScroll">
+	    <div class="ensanchador"></div>
+	</div>
+	<pre data-src="/resources/Kka1on142IOdi2/triqui1.html"></pre>
+</div>
+			<p>Para identificar los elementos que creamos usando CSS y Javascript, debemos ponerles atributos identificadores a modo de nombres, como las <i class="code">clases</i>, que pueden tener varios elementos, o los <i class="code">id</i>, que son únicos, para un elemento solamente. Usemos un <i class="code">id</i> para la cuadrícula, que es sólo una, y usemos <i class="code">clases</i> para las casillas que son varias y similares.</p>
+<div class="parent">
+	<div class="stScroll">
+	    <div class="ensanchador"></div>
+	</div>
+	<pre data-src="/resources/Kka1on142IOdi2/triqui2.html"></pre>
+</div>
+			<p>Ahora creemos una carpeta en la misma carpeta donde está el archivo HTML, que se llama <i class="code">triqui.html</i>, para contener los estilos CSS, llamada <i class="code">css</i> y creemos allí un archivo llamado <i class="code">style.css</i>. La carpeta donde está <i class="code">triqui.html</i> ahora debería lucir así:</p>
+			<div class="file_tree">
+			css<br>
+			└──style.css<br>
+			triqui.html<br>
+			</div>
+			<p>Y abriendo <i class="code">triqui.html</i> deberíamos ver un documento sin nada visible:</p>
+			<iframe src="/resources/Kka1on142IOdi2/triqui2.html" frameborder="0"></iframe>
+			<p>Usemos la etiqueta <i class="code">&lt;link&gt;</i> para conectar <i class="code">triqui.html</i> con <i class="code">css/style.css</i>:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/triqui3.html"></pre>
+			</div>
+			<p>Ahora escribamos algunos estilos en CSS. Los estilos de CSS nos permiten definir la forma, el tamaño, el color y muchísimas otras cosas de los elementos de HTML.</p>
+			<p>Definamos el alto y ancho de <i class="code">#cuadrícula</i> (los <i class="code">id</i> se identifican con un <i class="code">#</i> antes y las <i class="code">clases</i> con un <i class="code">.</i>, antes, también). El alto se llama <i class="code">height</i> en CSS y el ancho <i class="code">width</i>.</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/css/style.css"></pre>
+			</div>
+			<iframe src="/resources/Kka1on142IOdi2/triqui3.html" frameborder="0"></iframe>
+			<p><i class="code">display: inline-block;</i> hace que las casillas no se pongan una abajo de la otra sinó una a la derecha de la otra. Las casillas tienen un <i class="code">borde</i> de <i class="code">1px</i> (un píxel) a cada lado, entonces en vez de ponerles un ancho de <i class="code">30px</i> a cada uno, les puse un ancho de <i class="code">28px</i>, para que con los bordes sumara <i class="code">30px</i> cada casilla, y quedaran de a tres por fila por ende en la cuadrícula las casillas. Pero lidiar con HTML5 significa a veces tener que lidiar con comportamientos de navegadores anticuados de algunos usuarios que visitan nuestro sitio o aplicación web, y algunos resabios del mismo HTML en sí, y de CSS y Javascript; como en nuestro caso, que vemos que no caben perfectas las casillas en la cuadrícula a pesar de que el ancho total de cada una, con el borde, es de <i class="code">30px</i>. Esto se debe al espacio en blanco entre las casillas, todo lo que está señalado con guiones en este código: </p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/triqui4.html"></pre>
+			</div>
+			<p>La mejor manera de lidiar con esto, y que funcione en navegadores antiguos, es deshacernos de el <i class="code">espacio en blanco</i> entre elementos literalmente, cambiando el maquetado un poco:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/triqui5.html"></pre>
+			</div>
+			<iframe src="/resources/Kka1on142IOdi2/triqui5.html" frameborder="0"></iframe>
+			<p>Y cambiémosle el <i class="code">vertical-align</i> a <i class="code">top</i> a las casillas para que se alineen de su parte de arriba con su posición dentro de la cuadrícula:</p>			
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/css/style1.css"></pre>
+			</div>
+			<iframe src="/resources/Kka1on142IOdi2/triqui6.html" frameborder="0"></iframe>
+			<p>¡Listo!; ya tenemos nuestra cuadrícula. Ahora creemos una carpeta llamada <i class="code">js</i> y creemos un archivo dentro de ésta llamado <i class="code">main.js</i>. Así debería lucir en este momento la carpeta donde está <i class="code">triqui.html</i>:</p>
+			<div class="file_tree">
+			css<br>
+			└──style.css<br>
+			js<br>
+			└──main.js<br>
+			triqui.html<br>
+			</div>
+			<p>Usemos la etiqueta <i class="code">&lt;script&gt;&lt;/script&gt;</i> para conectar <i class="code">triqui.html</i> con <i class="code">main.js</i>. Tenemos que tener en cuenta que HTML, como Javascript, se leen por el computador síncronamente, esto es, de arriba a abajo, de izquierda a derecha, una sola vez, muuuuuy rápido; mejor dicho, de inmediato, una página tarda en cargar mientras descarga el archivo de HTML y los archivos que esta solicita al servidor, donde están las carpetas con los archivos y las configuraciones de comunicación con el cliente. Entonces si ponemos la etiqueta <i class="code">&lt;script&gt;&lt;/script&gt;</i> en el <i class="code">&lt;head&gt;&lt;/head&gt;</i>, no tendrá acceso a los elementos dentro de la etiqueta <i class="code">&lt;body&gt;&lt;/body&gt;</i>, ni los códigos dentro de etiquetas <i class="code">&lt;script&gt;&lt;/script&gt;</i> de más abajo. Así conectaríamos <i class="code">triqui.html</i> con <i class="code">js/main.js</i>:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/triqui7.html"></pre>
+			</div>
+			<p>Lo vamos a poner en el <i class="code">head</i> porque vamos a escribirle un código para que espere a que se cargue el <i class="code">documento</i>. El código que usaremos es este:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/js/main.js"></pre>
+			</div>
+			<p><a target="_blank" href="/resources/Kka1on142IOdi2/folder/triqui.html">Ábre <i class="code">triqui.html</i> en otra página</a> para que veas la alerta justo cuando se produce.</p>
+			<p>Hay varios <i class="code">eventListeners</i> que nos dispone Javascript, que pueden escuchar por ciertos eventos, como interacciones del usuario o eventos del documento; los puedes usar usando la función <i class="code">document.addEventListener()</i>, aquí, usamos el <i class="code">eventListener</i> <i class="code">DOMContentLoaded</i>, y la función que hay como segundo argumento de la función <i class="code">document.addEventListener()</i> es lo que se ejecutará cuando cargen todos los elementos del documento, que es aquello por lo que escucha <i class="code">DOMContentLoaded</i>, y en <i class="code">k</i> estarán disponibles todo el objeto que devuelve el <i class="code">eventListener</i>, o el <i class="code">callback</i>; no usaremos el <i class="code">callback</i> en este caso, sinó que usaremos <i class="code">alert()</i>, que nos permite aparecer un cuadro de diálogo del sistema con el texto que queramos, en este caso, la cantidad, que obtenemos con <i class="code">.length</i>, de las casillas, que obtenemos con <i class="code">document.getElementsByClassName("casilla")</i>.</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/js/main.js"></pre>
+			</div>
+			<p>¡Pero hagámoslo más calido y humano!, pongamos un mensaje más largo para dar ese dato:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/js/main1.js"></pre>
+			</div>
+			<p><a target="_blank" href="/resources/Kka1on142IOdi2/folder1/triqui.html">Míra <i class="code">triqui.html</i> aquí</a>.</p>
+			<p>Pero hágamos algo diferente cuando cargue la página; lo que íbamos a hacer, el <i>Triqui</i>. Lo que debería suceder cuando se cargue la página es que le pongamos un <i class="code">eventListener</i> a las casillas que nos diga cuando le dio click el usuario; ésto lo hacemos así:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/js/main2.js"></pre>
+			</div>
+			<p>El primero de los 9 elementos que obtenemos con <i class="code">document.getElementsByClassName</i> es el 0 y lo accedemos así: <i class="code">document.getElementsByClassName("casilla")[0]</i>. Vamos a empezar con la casilla 0 y seguir con cada una hasta la 8, que es la novena, por que empiezan en 0 y no en 1, y ponerle a cada una el <i class="code">eventListener</i> para que haga algo cuando le de click el usuario, ¡podemos hasta cambiar el CSS con Javascript!; esto lo podemos hacer con un bucle <i class="code">for(inicialización, condición, incrementador){}</i>. Lo que dice <i class="code">var i= 0;</i> es la inicialización, inicializamos la variable <i class="code">i</i> en 0. Después; lo que dice <i class="code">i < document.getElementsByClassName("casilla").length;</i> es la condición, que <i class="code">i</i> sea menor que la cantidad de casillas, que es nueve, si se cumple, cuando llega el código a la condición luego de la inicialización, que es sólo la primera vez, como el nombre lo dice, entra a ejecutar lo que hay entre corchetes <i class="code">{}</i>, luego de la inicialización y de que se haya ejecutado el código entre corchetes, el bucle pasa al incrementador, que es lo que dice <i class="code">i++</i>, en este caso aumente 1 al valor de <i class="code">i</i>, de ahí pasa a la condición y si se sigue cumpliendo ejecuta lo que hay entre corchetes.</p>
+			<p>Así, estaremos con el código dentro de los corchetes, que además usa <i class="code">i</i> para denotar la posición de cada una de las nueve casillas, poniéndole el <i class="code">eventListener</i> a cada una. El <i class="code">eventListener</i> en sí cambia el color del fondo de la casilla por otro cuando el usuario le da click.</p>
+			<iframe src="/resources/Kka1on142IOdi2/triqui8.html" frameborder="0"></iframe>
+			<aside id="botones">
+					<button class="button" id="down" title="Download full source.">Download Source</button>
+					<button class="button" id="gith" title="View on GitHub"></button>
+				</aside>
+				<p>...//</p>
+			<p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand? </p>
+<div class="parent">
+<div class="stScroll">
+    <div class="ensanchador"></div>
+</div>
+<pre class="language-markup limitar">
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+&lt;script&gt;
+	// Just a lil’ script to show off that inline JS gets highlighted
+	window.console && console.log('foo');
+&lt;/script&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;link rel="shortcut icon" href="favicon.png" /&gt;
+&lt;title&gt;Prism&lt;/title&gt;
+&lt;link rel="stylesheet" href="style.css" /&gt;
+&lt;link rel="stylesheet" href="themes/prism.css" data-noprefix /&gt;
+&lt;script src="prefixfree.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;var _gaq = [['_setAccount', 'UA-33746269-1'], ['_trackPageview']];&lt;/script&gt;
+&lt;script src="http://www.google-analytics.com/ga.js" async&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+	&lt;div class="intro" data-src="templates/header-main.html" data-type="text/html"&gt;&lt;/div&gt;
+	
+	&lt;ul id="features"&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Dead simple&lt;/strong&gt;
+			Include prism.css and prism.js, use proper HTML5 code tags (&lt;code&gt;code.language-xxxx&lt;/code&gt;), done!
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Intuitive&lt;/strong&gt;
+			Language classes are inherited so you can only define the language once for multiple code snippets.
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Light as a feather&lt;/strong&gt;
+			The core is 1.6KB minified &amp; gzipped. Languages add 0.3-0.5KB each, themes are around 1KB.
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	
+&lt;/header&gt;
+
+&lt;section id="used-by"&gt;
+	&lt;h1&gt;Used By&lt;/h1&gt;
+	
+	&lt;p&gt;Prism is used on several websites, small and large. Some of them are:&lt;/p&gt;
+	
+	&lt;div class="used-by-logos"&gt;
+		&lt;a href="http://smashingmagazine.com" target="_blank"&gt;&lt;img src="img/logo-smashing.png" alt="Smashing Magazine" /&gt;&lt;/a&gt;
+		&lt;a href="http://webplatform.org" target="_blank"&gt;&lt;img src="img/logo-wpd.png" alt="WebPlatform.org" /&gt;&lt;/a&gt;
+		&lt;a href="http://alistapart.com" target="_blank"&gt;&lt;img src="img/logo-ala.png" alt="A List Apart" /&gt;&lt;/a&gt;
+		
+		&lt;a href="https://developer.mozilla.org/" target="_blank"&gt;&lt;img src="img/logo-mdn.png" alt="Mozilla Developer Network (MDN)" /&gt;&lt;/a&gt;
+		&lt;a href="http://css-tricks.com" target="_blank"&gt;&lt;img src="img/logo-css-tricks.png" alt="CSS-Tricks" /&gt;&lt;/a&gt;
+		&lt;a href="http://typeplate.com" target="_blank"&gt;&lt;img src="img/logo-typeplate.png" alt="Typeplate" /&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	
+	&lt;p&gt;It’s also used on &lt;a href="https://brendaneich.com/2012/10/harmony-of-dreams-come-true/" target="_blank"&gt;the personal blog of Brendan Eich&lt;/a&gt;, creator of JavaScript itself!&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="examples"&gt;
+	&lt;h1&gt;Examples&lt;/h1&gt;
+	
+	&lt;p&gt;The Prism source, highlighted with Prism (don’t you just love how meta this is?):&lt;/p&gt;
+	&lt;pre data-src="prism.js"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s CSS code, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="style.css"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s HTML, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="index.html"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s logo (SVG), highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="logo.svg"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;If you’re still not sold, you can &lt;a href="examples.html"&gt;view more examples&lt;/a&gt; or &lt;a href="test.html"&gt;try it out for yourself&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="features-full"&gt;
+	&lt;h1&gt;Full list of features&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Only 2KB&lt;/strong&gt; minified &amp; gzipped (core). Each language definition adds roughly 300-500 bytes.&lt;/li&gt;
+		&lt;li&gt;Encourages good author practices. Other highlighters encourage or even force you to use elements that are semantically wrong, 
+			like &lt;code&gt;&lt;pre&gt;&lt;/code&gt; (on its own) or &lt;code&gt;&lt;script&gt;&lt;/code&gt;. 
+			Prism forces you to use the correct element for marking up code: &lt;code&gt;&lt;code&gt;&lt;/code&gt;. 
+			On its own for inline code, or inside a &lt;pre&gt; for blocks of code.
+			In addition, the language is defined through the way recommended in the HTML5 draft: through a language-xxxx class.&lt;/li&gt;
+		&lt;li&gt;The language definition is inherited. This means that if multiple code snippets have the same language, you can just define it once, in one of their common ancestors.&lt;/li&gt;
+		&lt;li&gt;Supports &lt;strong&gt;parallelism with Web Workers&lt;/strong&gt;, if available. Disabled by default (&lt;a href="faq.html#why-is-asynchronous-highlighting-disabled-by-default"&gt;why?&lt;/a&gt;).&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id="limitations"&gt;
+	&lt;h1&gt;Limitations&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Any pre-existing HTML in the code will be stripped off. &lt;a href="faq.html#if-pre-existing-html-is-stripped-off-how-can-i-highlight"&gt;There are ways around it though&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;Regex-based so it *will* fail on &lt;a href="examples.html#failures"&gt;certain edge cases&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;No IE 6-8 support. If someone can read code, they are probably in the 85% of the population with a modern browser.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id="basic-usage" class="language-markup"&gt;
+	&lt;h1&gt;Basic usage&lt;/h1&gt;
+	
+	&lt;p&gt;You will need to include the &lt;code&gt;prism.css&lt;/code&gt; and &lt;code&gt;prism.js&lt;/code&gt; files you downloaded in your page. Example:
+	&lt;pre&gt;&lt;code&gt;&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	...&lt;/code&gt;
+	&lt;code class="highlight"&gt;&lt;link href="themes/prism.css" rel="stylesheet" /&gt;&lt;/code&gt;
+&lt;code&gt;&lt;/head&gt;
+&lt;body&gt;
+	...&lt;/code&gt;
+	&lt;code class="highlight"&gt;&lt;script src="prism.js"&gt;&lt;/script&gt;&lt;/code&gt;
+&lt;code&gt;&lt;/body&gt;
+&lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;Prism does its best to encourage good authoring practices. Therefore, it only works with &lt;code&gt;&lt;code&gt;&lt;/code&gt; elements, since marking up code without a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element is semantically invalid. 
+	&lt;a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-code-element"&gt;According to the HTML5 spec&lt;/a&gt;, the recommended way to define a code language is a &lt;code&gt;language-xxxx&lt;/code&gt; class, which is what Prism uses.
+	To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple &lt;code&gt;&lt;code&gt;&lt;/code&gt; elements have the same language, you can add the &lt;code&gt;language-xxxx&lt;/code&gt; class on one of their common ancestors.
+	This way, you can also define a document-wide default language, by adding a &lt;code&gt;language-xxxx&lt;/code&gt; class on the &lt;code&gt;&lt;body&gt;&lt;/code&gt; or &lt;code&gt;&lt;html&gt;&lt;/code&gt; element.
+	
+	&lt;p&gt;If you want to opt-out of highlighting for a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element that is a descendant of an element with a declared code language, you can add the class &lt;code&gt;language-none&lt;/code&gt; to it (or any non-existing language, really).&lt;/p&gt;
+	
+	&lt;p&gt;The &lt;a href="http://www.w3.org/TR/html5/grouping-content.html#the-pre-element"&gt;recommended way to mark up a code block&lt;/a&gt; 
+	(both for semantics and for Prism) is a &lt;code&gt;&lt;pre&gt;&lt;/code&gt; element with a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element inside, like so:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&lt;pre&gt;&lt;code class="language-css"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;p&gt;If you use that pattern, the &lt;code&gt;&lt;pre&gt;&lt;/code&gt; will automatically get the &lt;code&gt;language-xxxx&lt;/code&gt; class (if it doesn’t already have it) and will be styled as a code block.&lt;/p&gt;
+	
+	&lt;p&gt;If you want to prevent any elements from being automatically highlighted, you can use the attribute &lt;code&gt;data-manual&lt;/code&gt; on the &lt;code&gt;&lt;script&gt;&lt;/code&gt; element you used for prism and use the &lt;a href="extending.html#api"&gt;API&lt;/a&gt;.
+	Example:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&lt;script src="prism.js" data-manual&gt;&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="plugins"&gt;
+	&lt;h1&gt;Plugins&lt;/h1&gt;
+	&lt;p&gt;Plugins are additional scripts (and CSS code) that extend Prism’s functionality. Many of the following plugins are official, but are released as plugins to keep the Prism Core small for those who don’t need the extra functionality.&lt;/p&gt;
+	&lt;ul class="plugin-list"&gt;&lt;/ul&gt;
+	
+	&lt;p&gt;No assembly required to use them. Just select them in the &lt;a href="download.html"&gt;download&lt;/a&gt; page.&lt;/p&gt;
+	&lt;p&gt;It’s very easy to &lt;a href="extending.html#writing-plugins"&gt;write your own Prism plugins&lt;/a&gt;. Did you write a plugin for Prism that you want added to this list? &lt;a href="https://github.com/LeaVerou/prism" target="_blank"&gt;Send a pull request&lt;/a&gt;!&lt;/p&gt;
+&lt;/section&gt;
+&lt;script src="prism.js" data-default-language="markup"&gt;&lt;/script&gt;
+&lt;script src="utopia.js"&gt;&lt;/script&gt;
+&lt;script src="components.js"&gt;&lt;/script&gt;
+&lt;script src="code.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+   		 	</code>
+		</pre>
+	</div>
+		</div>
+			<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+		
+			<p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
+			<ul>
+				<li>Uuummmm, this is a tasty burger!</li>
+				<li>Is she dead, yes or no?</li>
+				<li>No man, I don't eat pork</li>
+			</ul>
+			<p>
+				My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.
+			</p>
+			<h3 id="keepiterating">Hold on to your butts</h3>
+			<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+
+			<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
+
+			<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+			<ul>
+				<li>I know that seven of us survived the slide</li>
+				<li> We get some in our lungs</li>
+				<li>Your cells react to bacteria and viruses</li>
+			</ul>
+			<p>
+				After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a <a href="http://www.slipsum.com">candle to man.</a>.
+			</p>
+			<h3 id="conclusion">Conclusion</h3>
+			<p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand? </p>
+
+			<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
+
+			<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
+
+			<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+
+			<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? </p>
+
+		</section>
+		<pre><code class="language-css">p { color: red }</code></pre>
+		<aside id="botones">
+					<button class="button" id="down" title="Download full source.">Download Source</button>
+					<button class="button" id="gith" title="View on GitHub"></button>
+				</aside>
+	</section>
+
+
+	<section id="basTut" style="display:none;">
+		<span class="post-meta"><time datetime="2014-04-07">07 Apr 2014</time></span>
+		<h1 class="post-title">Are you ready for the truth?</h1>
+		<section class="post-content">
+			<img src="images/tech.jpg" alt="">
+			<p>
+				Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
+			</p>
+			<h3 id="useconstraints">I gotta piss</h3>
+			<ul>
+				<li>I can do that</li>
+				<li>Hold on to your butts</li>
+				<li>No, motherfucker</li>
+			</ul>
+			<p>The way they make shows is, they make one show.</p>
+			<h3 id="startrightaway">We happy?</h3>
+			<aside id="botones">
+					<button class="button" id="down" title="Download full source.">Download Source</button>
+					<button class="button" id="gith" title="View on GitHub"></button>
+				</aside>
+<pre class="language-markup limitar">
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+&lt;script&gt;
+	// Just a lil’ script to show off that inline JS gets highlighted
+	window.console && console.log('foo');
+&lt;/script&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;link rel="shortcut icon" href="favicon.png" /&gt;
+&lt;title&gt;Prism&lt;/title&gt;
+&lt;link rel="stylesheet" href="style.css" /&gt;
+&lt;link rel="stylesheet" href="themes/prism.css" data-noprefix /&gt;
+&lt;script src="prefixfree.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;var _gaq = [['_setAccount', 'UA-33746269-1'], ['_trackPageview']];&lt;/script&gt;
+&lt;script src="http://www.google-analytics.com/ga.js" async&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+	&lt;div class="intro" data-src="templates/header-main.html" data-type="text/html"&gt;&lt;/div&gt;
+	
+	&lt;ul id="features"&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Dead simple&lt;/strong&gt;
+			Include prism.css and prism.js, use proper HTML5 code tags (&lt;code&gt;code.language-xxxx&lt;/code&gt;), done!
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Intuitive&lt;/strong&gt;
+			Language classes are inherited so you can only define the language once for multiple code snippets.
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Light as a feather&lt;/strong&gt;
+			The core is 1.6KB minified &amp; gzipped. Languages add 0.3-0.5KB each, themes are around 1KB.
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	
+&lt;/header&gt;
+
+&lt;section id="used-by"&gt;
+	&lt;h1&gt;Used By&lt;/h1&gt;
+	
+	&lt;p&gt;Prism is used on several websites, small and large. Some of them are:&lt;/p&gt;
+	
+	&lt;div class="used-by-logos"&gt;
+		&lt;a href="http://smashingmagazine.com" target="_blank"&gt;&lt;img src="img/logo-smashing.png" alt="Smashing Magazine" /&gt;&lt;/a&gt;
+		&lt;a href="http://webplatform.org" target="_blank"&gt;&lt;img src="img/logo-wpd.png" alt="WebPlatform.org" /&gt;&lt;/a&gt;
+		&lt;a href="http://alistapart.com" target="_blank"&gt;&lt;img src="img/logo-ala.png" alt="A List Apart" /&gt;&lt;/a&gt;
+		
+		&lt;a href="https://developer.mozilla.org/" target="_blank"&gt;&lt;img src="img/logo-mdn.png" alt="Mozilla Developer Network (MDN)" /&gt;&lt;/a&gt;
+		&lt;a href="http://css-tricks.com" target="_blank"&gt;&lt;img src="img/logo-css-tricks.png" alt="CSS-Tricks" /&gt;&lt;/a&gt;
+		&lt;a href="http://typeplate.com" target="_blank"&gt;&lt;img src="img/logo-typeplate.png" alt="Typeplate" /&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	
+	&lt;p&gt;It’s also used on &lt;a href="https://brendaneich.com/2012/10/harmony-of-dreams-come-true/" target="_blank"&gt;the personal blog of Brendan Eich&lt;/a&gt;, creator of JavaScript itself!&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="examples"&gt;
+	&lt;h1&gt;Examples&lt;/h1&gt;
+	
+	&lt;p&gt;The Prism source, highlighted with Prism (don’t you just love how meta this is?):&lt;/p&gt;
+	&lt;pre data-src="prism.js"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s CSS code, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="style.css"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s HTML, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="index.html"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s logo (SVG), highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="logo.svg"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;If you’re still not sold, you can &lt;a href="examples.html"&gt;view more examples&lt;/a&gt; or &lt;a href="test.html"&gt;try it out for yourself&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="features-full"&gt;
+	&lt;h1&gt;Full list of features&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Only 2KB&lt;/strong&gt; minified &amp; gzipped (core). Each language definition adds roughly 300-500 bytes.&lt;/li&gt;
+		&lt;li&gt;Encourages good author practices. Other highlighters encourage or even force you to use elements that are semantically wrong, 
+			like &lt;code&gt;&lt;pre&gt;&lt;/code&gt; (on its own) or &lt;code&gt;&lt;script&gt;&lt;/code&gt;. 
+			Prism forces you to use the correct element for marking up code: &lt;code&gt;&lt;code&gt;&lt;/code&gt;. 
+			On its own for inline code, or inside a &lt;pre&gt; for blocks of code.
+			In addition, the language is defined through the way recommended in the HTML5 draft: through a language-xxxx class.&lt;/li&gt;
+		&lt;li&gt;The language definition is inherited. This means that if multiple code snippets have the same language, you can just define it once, in one of their common ancestors.&lt;/li&gt;
+		&lt;li&gt;Supports &lt;strong&gt;parallelism with Web Workers&lt;/strong&gt;, if available. Disabled by default (&lt;a href="faq.html#why-is-asynchronous-highlighting-disabled-by-default"&gt;why?&lt;/a&gt;).&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id="limitations"&gt;
+	&lt;h1&gt;Limitations&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Any pre-existing HTML in the code will be stripped off. &lt;a href="faq.html#if-pre-existing-html-is-stripped-off-how-can-i-highlight"&gt;There are ways around it though&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;Regex-based so it *will* fail on &lt;a href="examples.html#failures"&gt;certain edge cases&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;No IE 6-8 support. If someone can read code, they are probably in the 85% of the population with a modern browser.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id="basic-usage" class="language-markup"&gt;
+	&lt;h1&gt;Basic usage&lt;/h1&gt;
+	
+	&lt;p&gt;You will need to include the &lt;code&gt;prism.css&lt;/code&gt; and &lt;code&gt;prism.js&lt;/code&gt; files you downloaded in your page. Example:
+	&lt;pre&gt;&lt;code&gt;&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	...&lt;/code&gt;
+	&lt;code class="highlight"&gt;&lt;link href="themes/prism.css" rel="stylesheet" /&gt;&lt;/code&gt;
+&lt;code&gt;&lt;/head&gt;
+&lt;body&gt;
+	...&lt;/code&gt;
+	&lt;code class="highlight"&gt;&lt;script src="prism.js"&gt;&lt;/script&gt;&lt;/code&gt;
+&lt;code&gt;&lt;/body&gt;
+&lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;Prism does its best to encourage good authoring practices. Therefore, it only works with &lt;code&gt;&lt;code&gt;&lt;/code&gt; elements, since marking up code without a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element is semantically invalid. 
+	&lt;a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-code-element"&gt;According to the HTML5 spec&lt;/a&gt;, the recommended way to define a code language is a &lt;code&gt;language-xxxx&lt;/code&gt; class, which is what Prism uses.
+	To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple &lt;code&gt;&lt;code&gt;&lt;/code&gt; elements have the same language, you can add the &lt;code&gt;language-xxxx&lt;/code&gt; class on one of their common ancestors.
+	This way, you can also define a document-wide default language, by adding a &lt;code&gt;language-xxxx&lt;/code&gt; class on the &lt;code&gt;&lt;body&gt;&lt;/code&gt; or &lt;code&gt;&lt;html&gt;&lt;/code&gt; element.
+	
+	&lt;p&gt;If you want to opt-out of highlighting for a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element that is a descendant of an element with a declared code language, you can add the class &lt;code&gt;language-none&lt;/code&gt; to it (or any non-existing language, really).&lt;/p&gt;
+	
+	&lt;p&gt;The &lt;a href="http://www.w3.org/TR/html5/grouping-content.html#the-pre-element"&gt;recommended way to mark up a code block&lt;/a&gt; 
+	(both for semantics and for Prism) is a &lt;code&gt;&lt;pre&gt;&lt;/code&gt; element with a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element inside, like so:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&lt;pre&gt;&lt;code class="language-css"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;p&gt;If you use that pattern, the &lt;code&gt;&lt;pre&gt;&lt;/code&gt; will automatically get the &lt;code&gt;language-xxxx&lt;/code&gt; class (if it doesn’t already have it) and will be styled as a code block.&lt;/p&gt;
+	
+	&lt;p&gt;If you want to prevent any elements from being automatically highlighted, you can use the attribute &lt;code&gt;data-manual&lt;/code&gt; on the &lt;code&gt;&lt;script&gt;&lt;/code&gt; element you used for prism and use the &lt;a href="extending.html#api"&gt;API&lt;/a&gt;.
+	Example:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&lt;script src="prism.js" data-manual&gt;&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="plugins"&gt;
+	&lt;h1&gt;Plugins&lt;/h1&gt;
+	&lt;p&gt;Plugins are additional scripts (and CSS code) that extend Prism’s functionality. Many of the following plugins are official, but are released as plugins to keep the Prism Core small for those who don’t need the extra functionality.&lt;/p&gt;
+	&lt;ul class="plugin-list"&gt;&lt;/ul&gt;
+	
+	&lt;p&gt;No assembly required to use them. Just select them in the &lt;a href="download.html"&gt;download&lt;/a&gt; page.&lt;/p&gt;
+	&lt;p&gt;It’s very easy to &lt;a href="extending.html#writing-plugins"&gt;write your own Prism plugins&lt;/a&gt;. Did you write a plugin for Prism that you want added to this list? &lt;a href="https://github.com/LeaVerou/prism" target="_blank"&gt;Send a pull request&lt;/a&gt;!&lt;/p&gt;
+&lt;/section&gt;
+&lt;script src="prism.js" data-default-language="markup"&gt;&lt;/script&gt;
+&lt;script src="utopia.js"&gt;&lt;/script&gt;
+&lt;script src="components.js"&gt;&lt;/script&gt;
+&lt;script src="code.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+   		 	</code>
+		</pre>
+			
+			<p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
+			<ul>
+				<li>Uuummmm, this is a tasty burger!</li>
+				<li>Is she dead, yes or no?</li>
+				<li>No man, I don't eat pork</li>
+			</ul>
+			
+			<h3 id="keepiterating">Hold on to your butts</h3>
+		
+			<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+			
+			<p>
+				After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a <a href="http://www.slipsum.com">candle to man.</a>.
+			</p>
+			<h3 id="conclusion">Conclusion</h3>
+		
+			<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+
+			<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? </p>
+
+			<pre><code class="language-css">p { color: red }</code></pre>
+			<aside id="botones">
+					<button class="button" id="down" title="Download full source.">Download Source</button>
+					<button class="button" id="gith" title="View on GitHub"></button>
+				</aside>
+	</section>
+</section>
+
+
+<section id="sourceTut" style="display:none;">
+				
+			<span class="post-meta"><time datetime="2014-04-07">07 Apr 2014</time></span>
+		<h1 class="post-title">Are you ready for the truth?</h1>
+		<aside id="botones">
+			<button class="button" id="down" title="Download full source.">Download Source</button>
+			<button class="button" id="gith" title="View on GitHub"></button>
+		</aside>
+		<section class="post-content">
+<pre class="language-markup limitar">
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+&lt;script&gt;
+	// Just a lil’ script to show off that inline JS gets highlighted
+	window.console && console.log('foo');
+&lt;/script&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;link rel="shortcut icon" href="favicon.png" /&gt;
+&lt;title&gt;Prism&lt;/title&gt;
+&lt;link rel="stylesheet" href="style.css" /&gt;
+&lt;link rel="stylesheet" href="themes/prism.css" data-noprefix /&gt;
+&lt;script src="prefixfree.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;var _gaq = [['_setAccount', 'UA-33746269-1'], ['_trackPageview']];&lt;/script&gt;
+&lt;script src="http://www.google-analytics.com/ga.js" async&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+	&lt;div class="intro" data-src="templates/header-main.html" data-type="text/html"&gt;&lt;/div&gt;
+	
+	&lt;ul id="features"&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Dead simple&lt;/strong&gt;
+			Include prism.css and prism.js, use proper HTML5 code tags (&lt;code&gt;code.language-xxxx&lt;/code&gt;), done!
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Intuitive&lt;/strong&gt;
+			Language classes are inherited so you can only define the language once for multiple code snippets.
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Light as a feather&lt;/strong&gt;
+			The core is 1.6KB minified &amp; gzipped. Languages add 0.3-0.5KB each, themes are around 1KB.
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	
+&lt;/header&gt;
+
+&lt;section id="used-by"&gt;
+	&lt;h1&gt;Used By&lt;/h1&gt;
+	
+	&lt;p&gt;Prism is used on several websites, small and large. Some of them are:&lt;/p&gt;
+	
+	&lt;div class="used-by-logos"&gt;
+		&lt;a href="http://smashingmagazine.com" target="_blank"&gt;&lt;img src="img/logo-smashing.png" alt="Smashing Magazine" /&gt;&lt;/a&gt;
+		&lt;a href="http://webplatform.org" target="_blank"&gt;&lt;img src="img/logo-wpd.png" alt="WebPlatform.org" /&gt;&lt;/a&gt;
+		&lt;a href="http://alistapart.com" target="_blank"&gt;&lt;img src="img/logo-ala.png" alt="A List Apart" /&gt;&lt;/a&gt;
+		
+		&lt;a href="https://developer.mozilla.org/" target="_blank"&gt;&lt;img src="img/logo-mdn.png" alt="Mozilla Developer Network (MDN)" /&gt;&lt;/a&gt;
+		&lt;a href="http://css-tricks.com" target="_blank"&gt;&lt;img src="img/logo-css-tricks.png" alt="CSS-Tricks" /&gt;&lt;/a&gt;
+		&lt;a href="http://typeplate.com" target="_blank"&gt;&lt;img src="img/logo-typeplate.png" alt="Typeplate" /&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	
+	&lt;p&gt;It’s also used on &lt;a href="https://brendaneich.com/2012/10/harmony-of-dreams-come-true/" target="_blank"&gt;the personal blog of Brendan Eich&lt;/a&gt;, creator of JavaScript itself!&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="examples"&gt;
+	&lt;h1&gt;Examples&lt;/h1&gt;
+	
+	&lt;p&gt;The Prism source, highlighted with Prism (don’t you just love how meta this is?):&lt;/p&gt;
+	&lt;pre data-src="prism.js"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s CSS code, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="style.css"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s HTML, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="index.html"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;This page’s logo (SVG), highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src="logo.svg"&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;If you’re still not sold, you can &lt;a href="examples.html"&gt;view more examples&lt;/a&gt; or &lt;a href="test.html"&gt;try it out for yourself&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="features-full"&gt;
+	&lt;h1&gt;Full list of features&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Only 2KB&lt;/strong&gt; minified &amp; gzipped (core). Each language definition adds roughly 300-500 bytes.&lt;/li&gt;
+		&lt;li&gt;Encourages good author practices. Other highlighters encourage or even force you to use elements that are semantically wrong, 
+			like &lt;code&gt;&lt;pre&gt;&lt;/code&gt; (on its own) or &lt;code&gt;&lt;script&gt;&lt;/code&gt;. 
+			Prism forces you to use the correct element for marking up code: &lt;code&gt;&lt;code&gt;&lt;/code&gt;. 
+			On its own for inline code, or inside a &lt;pre&gt; for blocks of code.
+			In addition, the language is defined through the way recommended in the HTML5 draft: through a language-xxxx class.&lt;/li&gt;
+		&lt;li&gt;The language definition is inherited. This means that if multiple code snippets have the same language, you can just define it once, in one of their common ancestors.&lt;/li&gt;
+		&lt;li&gt;Supports &lt;strong&gt;parallelism with Web Workers&lt;/strong&gt;, if available. Disabled by default (&lt;a href="faq.html#why-is-asynchronous-highlighting-disabled-by-default"&gt;why?&lt;/a&gt;).&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id="limitations"&gt;
+	&lt;h1&gt;Limitations&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Any pre-existing HTML in the code will be stripped off. &lt;a href="faq.html#if-pre-existing-html-is-stripped-off-how-can-i-highlight"&gt;There are ways around it though&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;Regex-based so it *will* fail on &lt;a href="examples.html#failures"&gt;certain edge cases&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;No IE 6-8 support. If someone can read code, they are probably in the 85% of the population with a modern browser.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id="basic-usage" class="language-markup"&gt;
+	&lt;h1&gt;Basic usage&lt;/h1&gt;
+	
+	&lt;p&gt;You will need to include the &lt;code&gt;prism.css&lt;/code&gt; and &lt;code&gt;prism.js&lt;/code&gt; files you downloaded in your page. Example:
+	&lt;pre&gt;&lt;code&gt;&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	...&lt;/code&gt;
+	&lt;code class="highlight"&gt;&lt;link href="themes/prism.css" rel="stylesheet" /&gt;&lt;/code&gt;
+&lt;code&gt;&lt;/head&gt;
+&lt;body&gt;
+	...&lt;/code&gt;
+	&lt;code class="highlight"&gt;&lt;script src="prism.js"&gt;&lt;/script&gt;&lt;/code&gt;
+&lt;code&gt;&lt;/body&gt;
+&lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;
+	
+	&lt;p&gt;Prism does its best to encourage good authoring practices. Therefore, it only works with &lt;code&gt;&lt;code&gt;&lt;/code&gt; elements, since marking up code without a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element is semantically invalid. 
+	&lt;a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-code-element"&gt;According to the HTML5 spec&lt;/a&gt;, the recommended way to define a code language is a &lt;code&gt;language-xxxx&lt;/code&gt; class, which is what Prism uses.
+	To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple &lt;code&gt;&lt;code&gt;&lt;/code&gt; elements have the same language, you can add the &lt;code&gt;language-xxxx&lt;/code&gt; class on one of their common ancestors.
+	This way, you can also define a document-wide default language, by adding a &lt;code&gt;language-xxxx&lt;/code&gt; class on the &lt;code&gt;&lt;body&gt;&lt;/code&gt; or &lt;code&gt;&lt;html&gt;&lt;/code&gt; element.
+	
+	&lt;p&gt;If you want to opt-out of highlighting for a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element that is a descendant of an element with a declared code language, you can add the class &lt;code&gt;language-none&lt;/code&gt; to it (or any non-existing language, really).&lt;/p&gt;
+	
+	&lt;p&gt;The &lt;a href="http://www.w3.org/TR/html5/grouping-content.html#the-pre-element"&gt;recommended way to mark up a code block&lt;/a&gt; 
+	(both for semantics and for Prism) is a &lt;code&gt;&lt;pre&gt;&lt;/code&gt; element with a &lt;code&gt;&lt;code&gt;&lt;/code&gt; element inside, like so:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&lt;pre&gt;&lt;code class="language-css"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;p&gt;If you use that pattern, the &lt;code&gt;&lt;pre&gt;&lt;/code&gt; will automatically get the &lt;code&gt;language-xxxx&lt;/code&gt; class (if it doesn’t already have it) and will be styled as a code block.&lt;/p&gt;
+	
+	&lt;p&gt;If you want to prevent any elements from being automatically highlighted, you can use the attribute &lt;code&gt;data-manual&lt;/code&gt; on the &lt;code&gt;&lt;script&gt;&lt;/code&gt; element you used for prism and use the &lt;a href="extending.html#api"&gt;API&lt;/a&gt;.
+	Example:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&lt;script src="prism.js" data-manual&gt;&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="plugins"&gt;
+	&lt;h1&gt;Plugins&lt;/h1&gt;
+	&lt;p&gt;Plugins are additional scripts (and CSS code) that extend Prism’s functionality. Many of the following plugins are official, but are released as plugins to keep the Prism Core small for those who don’t need the extra functionality.&lt;/p&gt;
+	&lt;ul class="plugin-list"&gt;&lt;/ul&gt;
+	
+	&lt;p&gt;No assembly required to use them. Just select them in the &lt;a href="download.html"&gt;download&lt;/a&gt; page.&lt;/p&gt;
+	&lt;p&gt;It’s very easy to &lt;a href="extending.html#writing-plugins"&gt;write your own Prism plugins&lt;/a&gt;. Did you write a plugin for Prism that you want added to this list? &lt;a href="https://github.com/LeaVerou/prism" target="_blank"&gt;Send a pull request&lt;/a&gt;!&lt;/p&gt;
+&lt;/section&gt;
+&lt;script src="prism.js" data-default-language="markup"&gt;&lt;/script&gt;
+&lt;script src="utopia.js"&gt;&lt;/script&gt;
+&lt;script src="components.js"&gt;&lt;/script&gt;
+&lt;script src="code.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+   		 	</code>
+		</pre>
+			
+			<h3 id="conclusion">Conclusion</h3>
+			<pre><code class="language-css">p { color: red }</code></pre>
+
+	</section>
+</section>
+</article>
+</main>
+
+   <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'soyluisgallego'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'soyluisgallego'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+
+<script>
+	function viewport() {
+  	  var e = window, a = 'inner';
+  	  if (!('innerWidth' in window )) {
+  	      a = 'client';
+  	      e = document.documentElement || document.body;
+  	  }
+  	  return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+	}
+	var keys = [37, 38, 39, 40];
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function keydown(e) {
+    for (var i = keys.length; i--;) {
+        if (e.keyCode === keys[i]) {
+            preventDefault(e);
+            return;
+        }
+    }
+}
+
+function wheel(e) {
+  preventDefault(e);
+}
+
+function disable_scroll() {
+  if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = wheel;
+  document.onkeydown = keydown;
+}
+
+function enable_scroll() {
+    if (window.removeEventListener) {
+        window.removeEventListener('DOMMouseScroll', wheel, false);
+    }
+    window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+}
+
+	
+	var ya = true
+	setInterval(function() {
+     	if($(document).scrollTop() >= 135 && viewport().width > 1210){
+
+			$('header').css({
+				"height": 50,
+				"position":"fixed",
+				"width":"100%",
+				"top":0,
+				"z-index":10000
+			});
+			$('header nav').css({
+				"margin-top":0
+
+			});
+			$('#social').css({
+				"margin-top":0,
+				"margin-bottom":0
+			});
+			$("body").css({
+				"margin-top":135
+			});
+			$("#luis").css({
+				"display":"none"
+			});
+			if(!$('header').hasClass('fadeInDown')){
+				
+				$('header').addClass('animated fadeInDown');
+			}
+			ya = false;
+		}else if(!ya && viewport().width > 1210){
+				disable_scroll();
+				$('html, body').animate({scrollTop: 0}, 750, "easeOutBounce", function() {
+    			enable_scroll();
+				});
+				$('header').removeClass('animated fadeInDown');
+				$('header').css({
+					"height": 135,
+					"position":"static",
+					"width":"100%",
+					"top":0,
+					"z-index":10000,
+					"margin-top":0
+				});
+				$('header nav').css({
+					"margin-top":44
+				});
+				$('#social').css({
+					"margin-top":43,
+					"margin-bottom":43
+				});
+				$("body").css({
+					"margin-top":0
+				});
+				
+				$("#luis").css({
+					"display":"inline-block"
+				});
+				
+				ya = true
+
+			
+		}
+    }, 100);
+
+
+			$('.link_info').hover(function(){
+				$(this).parent().children('.caption').css({
+					display: 'block'
+				});
+			},function(){
+				$(this).parent().children('.caption').css({
+					display: 'none'
+				});
+			})
+		  	var nav = responsiveNav(".nav-collapse",{ // Selector
+			animate: true, // Boolean: Use CSS3 transitions, true or false
+			transition: 300, // Integer: Speed of the transition, in milliseconds
+			label: "", // String: Label for the navigation toggle
+			insert: "before", // String: Insert the toggle before or after the navigation
+			customToggle: "", // Selector: Specify the ID of a custom toggle
+			openPos: "static", // String: Position of the opened nav, relative or static
+			jsClass: "js", // String: 'JS enabled' class which is added to <html> el
+			init: function(){}, // Function: Init callback
+			open: function(){}, // Function: Open callback
+			close: function(){} // Function: Close callback
+
+			});
+			
+		
+			$('#full').click(function() {
+			  $('#fullTut').show();
+			  $('#basTut').hide();
+			  $('#sourceTut').hide();
+			  $('#full').addClass('reading');
+			  $('#basic').removeClass('reading');
+			  $('#source').removeClass('reading')
+			});
+
+			$('#basic').click(function() {
+			  $('#fullTut').hide();
+			  $('#basTut').show();
+			  $('#sourceTut').hide();
+			  $('#full').removeClass('reading');
+			  $('#basic').addClass('reading');
+			  $('#source').removeClass('reading')
+			});
+
+			$('#source').click(function() {
+			  $('#fullTut').hide();
+			  $('#basTut').hide();
+			  $('#sourceTut').show();
+			  $('#full').removeClass('reading');
+			  $('#basic').removeClass('reading');
+			  $('#source').addClass('reading')
+			});
+
+		 $('.stScroll').on('scroll', function () {
+    			$(this).next().scrollLeft($(this).scrollLeft());
+			});
+		  $('pre.language-markup').on('scroll', function () {
+    			$('.stScroll').scrollLeft($(this).scrollLeft());
+			});
+ 			window.onload =function() {
+       			setTimeout(function(){
+
+       				$(".ensanchador").each(function(){pW= $(this).parent().next().children().width();$(this).css("width", pW)})},3791)
+   			 }
+
+		</script>
+
+		<script src="js/prism.js"></script>
+</body>
+</html>

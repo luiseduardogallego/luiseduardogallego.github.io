@@ -40,6 +40,37 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon(3)/icomoon.eot?q307ty');
+  src:  url('/fonts/icomoon(3)/icomoon.eot?q307ty#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon(3)/icomoon.ttf?q307ty') format('truetype'),
+    url('/fonts/icomoon(3)/icomoon.woff?q307ty') format('woff'),
+    url('/fonts/icomoon(3)/icomoon.svg?q307ty#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  width: 1em;
+  display: inline-block;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-html-five:before {
+  content: "\eae4";
+}
 
 /* Apply these base styles to all icons */
 .icon-ghost:before, 
@@ -92,7 +123,7 @@ body {
 
     font-size: 2.0rem;
     color: #8A8B8B;
-
+    font-family: "Open Sans";
 }
 
 h1, h2, h3,
@@ -100,7 +131,6 @@ h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
-    font-family: 'Noto Serif', sans-serif;
 }
 
 h1 {
@@ -535,7 +565,6 @@ p img
 }
 .content
 {
-    font-family: 'Noto Serif', serif;
 }
 
 #slide
@@ -606,7 +635,6 @@ border-radius: 3px;
     margin:  5px auto;
     padding: 10px 3%;
     width: 66%;
-    font-family: "Noto Serif"
 }
 #botones #gith
 {
@@ -649,3 +677,8 @@ border-radius: 3px;
     outline:0.1px solid #bdc3c7;
 }
 
+
+.halfwidth{
+    width: 32% !important;
+    display: inline-block;
+}

@@ -891,17 +891,17 @@ header #social
 	box-sizing: initial !important;
 }
 
-#stScroll
+.stScroll
 {
      width: 100%;
      height: 73px;
      overflow-x: scroll;
      overflow-y: hidden;
      top: 0;
-   
+   	position: sticky;
      /*width: 60%;*/
 }
-#ensanchador
+.ensanchador
 {
     height: 16px;
     width: 2000px;
@@ -918,4 +918,20 @@ a:hover .l
 }
 .hiddenForm{
 	display: none
+}
+i.code {
+    font-style: oblique;
+    background-color: #ddf8ae;
+    padding: 0 3px;
+    border: 1px outset cadetblue;
+}
+div.file_tree {
+    background: #ffd88c47;
+    width: max-content;
+    padding: 6px;
+}
+.post iframe {
+    width: 100%;
+    height: 273px;
+    border: 1px solid darkgray;
 }
