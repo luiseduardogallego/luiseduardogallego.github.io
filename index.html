@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Luis Gallego's web design blog and professional portfolio.">
+	<meta name="description" content="Luis Eduardo Gallego García's web design blog and professional portfolio.">
 	<meta http-equiv="content-language" content="en-us" />
 	<link rel="canonical" href="http://luisgallego.github.com/index.html" />
 
@@ -89,7 +89,7 @@
 								</div>
 								<!--Otra nueva ""diapositiva""-->
 								<div data-iview:image="photos/gif2.gif" data-iview:transition="fade">
-									<div cflass="modalInfo">
+									<div class="modalInfo">
 										<span class="title">minesweeper</span>
 										<span class="description">Como el clásico Buscaminas™ de Windows®; un homenaje a HTML</span>
 										<span class="linkPlay">https://lirilc.github.io/L/raw/p/2kNoind8JsjD9/index.html</span>
@@ -148,8 +148,28 @@
 	</section>
 	<section id="container">
 		<article class="item">
+			<div class="info"></div>
+			<aside class="caption">
+				<section class="level">
+					<p>pri</p>
+				</section>
+				<section class="tags">
+					<div class="tag">
+						<p>HTML5</p>
+					</div>
+					<div class="tag">
+						<p>CSS3</p>
+					</div>
+					<div class="tag">
+						<p>Javascript</p>
+					</div>
+				</section>
+			</aside>
+			<a class="link_info" href="#"></a>
+			
+			<a href="/tictactoe" class="link"></a>
 			<figure class="imagen_item">
-				<img src="chrome.png" />
+				<img src="/photos/Kka1on142IOdi2/triqui6.jpg" />
 			</figure>
 			<h2 class="titulo_item">
 				<a href="/tictactoe">¿Cómo hacer un juego de triqui en HTML5?</a>
@@ -259,6 +279,15 @@
 		/*Fin del Script*/
 		</script>
 		<script>
+			$('.link_info').hover(function(){
+				$(this).parent().children('.caption').css({
+					display: 'block'
+				});
+			},function(){
+				$(this).parent().children('.caption').css({
+					display: 'none'
+				});
+			})
 		  	var nav = responsiveNav(".nav-collapse",{ // Selector
 			animate: true, // Boolean: Use CSS3 transitions, true or false
 			transition: 300, // Integer: Speed of the transition, in milliseconds
