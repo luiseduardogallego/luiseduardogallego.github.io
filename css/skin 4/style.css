@@ -60,7 +60,7 @@
 }
 
 .iview-caption {
-	background: #ecf0f142;
+	background: #9b9b9b42;
 	color: #FFF;
 	border-radius: 0;
 	padding: 10px 0;
@@ -96,4 +96,7 @@
 
 #iview-timer div {
 	border-radius: 0;
+}
+#iview-timer div {
+    background: #a0a9db !important;
 }
