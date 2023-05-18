@@ -935,3 +935,6 @@ div.file_tree {
     height: 273px;
     border: 1px solid darkgray;
 }
+video{
+	width: 100%;
+}
