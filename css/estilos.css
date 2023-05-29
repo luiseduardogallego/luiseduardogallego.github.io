@@ -171,6 +171,11 @@ header #social #tt:before
 {
 	content:"\e619"
 }
+header #social #tu:before
+{
+	font-family: "icomoon";
+	content:"\eab9";
+}
 header #social #yt:before
 {
 	content:"\e61b"
@@ -183,7 +188,8 @@ header #social #ll
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	background-position-y: 5px;
+	top: 5px;
+	position: relative;
 
 }
 header #social #gh:before
