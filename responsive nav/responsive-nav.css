@@ -6,6 +6,11 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  position: absolute;
+  height: 0;
+  top: 24px !important;
+  position: absolute !important;
+  line-height: 0;
 }
 
 @media screen and (max-width: 350px){
@@ -87,7 +92,7 @@
     header #social
     {
       width: 65%;
-      margin:0 !important;
+      margin:0 12px 0 0 !important;
       text-align: right;
     }
     
@@ -130,7 +135,7 @@
  
         font-family: 'icomoon';
        content: "\e600";
-       font-size: 50px;
+       font-size: 41px;
        color: #fff;
     }
     #navegacion input
@@ -146,7 +151,7 @@
     }
     header.abierto
 {
-height: 15em ;
+height: 300px ;
 }
 header.cerrado
 {
@@ -232,3 +237,13 @@ a:hover {
     
     }
   }
+@media screen and (max-width: 320px) {
+  header #social
+    {
+      display: none
+    }
+  }
+
+.nav-collapse.opened {
+    max-height: unset !important;
+}

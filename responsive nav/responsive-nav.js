@@ -214,7 +214,9 @@
            $('header').addClass("abierto");
             navOpen = true;
             opts.open();
+            $("#social").addClass("visible")
           } else {
+            $("#social").removeClass("visible")
             $('header').removeClass("abierto");
            $('header').addClass("cerrado");
             removeClass(nav, "opened");

@@ -87,6 +87,7 @@ header
 	margin-bottom: 6px;
 	box-shadow:  0 6px 0  #27ae60;
 	height: 130px;
+	position: relative;
 }
 form #email
 {
@@ -106,8 +107,9 @@ header ul a
 }
 header ul li
 {
-	padding: 3px 4%;
+	padding: 0px 4%;
 }
+
 header nav
 {
 	text-decoration: none;
@@ -152,6 +154,9 @@ header #social
     font-size: 34px;
     width: 20%;
     left: 74%;
+}
+header #social.visible{
+	display: block !important;
 }
 header #social aside
 {
