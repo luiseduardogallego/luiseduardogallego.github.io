@@ -299,7 +299,7 @@ kbd {
         0 1px 0 0 #fff inset;
 }
 
-table {
+/*table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
@@ -342,7 +342,7 @@ table.plain tbody > tr:nth-child(odd) > th {
    background: transparent;
 }
 
-
+*/
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
@@ -678,7 +678,130 @@ border-radius: 3px;
 }
 
 
-.halfwidth{
-    width: 32% !important;
+.audioplayer {
+    width: 100%;
+    height: 262px;
+    position: relative;
+    border: 4px double #eecb79;
+    margin-bottom: 6px
+}
+.left {
+  width: 50%;
+}
+.left, .right {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+}
+.right {
+  right: 0;
+  border-left: 6px solid #9b9999;
+}
+.info, .lyrics, .download {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 30px);
+  top: 30px;
+  display: none;
+}
+.información, .letras, .descargar {
+  width: 33.3%;
+  display: inline-block;
+  text-align: center;
+  color: #9f9f9f;
+  font-size: 13px;
+  user-select: none;
+}
+.audioplayer .tabs .selected {
+  text-decoration: underline;
+}
+.tabs {
+  border-bottom: 1px solid #cac9ca87;
+}
+.right > .selected {
+  display: block;
+}
+.audioplayer table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 17px;
+}
+.audioplayer td,
+.audioplayer th {
+  padding: 0 3px;
+}
+.audioplayer table th:first-child {
+  font-weight: normal;
+  color: #232303cf;
+  border: 1px solid;
+}
+.audioplayer table th:last-child {
+  font-weight: lighter;
+  color: #232303;
+  font-style: oblique;
+  border-bottom: 1px dashed;
+}
+.información:not(.selected), .letras:not(.selected), .descargar:not(.selected){
+    cursor: pointer
+}
+.información.selected, .letras.selected, .descargar.selected{
+    cursor: default
+}
+.lyrics.selected {
+  /*! background: grey; */
+}
+.lyrics pre {
+    font-size: 16px !important;
+    margin-top: 17px;
+    border-radius: 0;
+    background: #ececec;
+    padding: 8px 7px;
+    height: calc(100% - 34px);
+    overflow-y: scroll;
+}
+.lyrics .language-txt {
+  font-size: 13px;
+  color: #646464;
+  text-shadow: none;
+  font-family: "Open Sans"
+}
+
+.left{
+    background-color: black;
+}
+audio {
     display: inline-block;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+label, button {
+  background: #f0f0f0;
+  border: 1px solid #999;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 10px 0;
+  padding: 8px 40px;
+  vertical-align: top;
+}
+
+label input {
+  display: none;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+}
+.left_cover {
+    position: absolute;
+    width: 100%;
+    height: 210px;
+    top: 0;
 }
