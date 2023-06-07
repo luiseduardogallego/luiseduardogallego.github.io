@@ -805,3 +805,6 @@ canvas {
     height: 210px;
     top: 0;
 }
+.halfwidth {
+    width: 29% !important;
+}
