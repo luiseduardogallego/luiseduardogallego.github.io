@@ -231,11 +231,45 @@
 			<p>El primero de los 9 elementos que obtenemos con <i class="code">document.getElementsByClassName</i> es el 0 y lo accedemos así: <i class="code">document.getElementsByClassName("casilla")[0]</i>. Vamos a empezar con la casilla 0 y seguir con cada una hasta la 8, que es la novena, por que empiezan en 0 y no en 1, y ponerle a cada una el <i class="code">eventListener</i> para que haga algo cuando le de click el usuario, ¡podemos hasta cambiar el CSS con Javascript!; esto lo podemos hacer con un bucle <i class="code">for(inicialización, condición, incrementador){}</i>. Lo que dice <i class="code">var i= 0;</i> es la inicialización, inicializamos la variable <i class="code">i</i> en 0. Después; lo que dice <i class="code">i < document.getElementsByClassName("casilla").length;</i> es la condición, que <i class="code">i</i> sea menor que la cantidad de casillas, que es nueve, si se cumple, cuando llega el código a la condición luego de la inicialización, que es sólo la primera vez, como el nombre lo dice, entra a ejecutar lo que hay entre corchetes <i class="code">{}</i>, luego de la inicialización y de que se haya ejecutado el código entre corchetes, el bucle pasa al incrementador, que es lo que dice <i class="code">i++</i>, en este caso aumente 1 al valor de <i class="code">i</i>, de ahí pasa a la condición y si se sigue cumpliendo ejecuta lo que hay entre corchetes.</p>
 			<p>Así, estaremos con el código dentro de los corchetes, que además usa <i class="code">i</i> para denotar la posición de cada una de las nueve casillas, poniéndole el <i class="code">eventListener</i> a cada una. El <i class="code">eventListener</i> en sí cambia el color del fondo de la casilla por otro cuando el usuario le da click.</p>
 			<iframe src="/resources/Kka1on142IOdi2/triqui8.html" frameborder="0"></iframe>
+			<p>Ahora, vamos a cambiarle el css a las casillas pero poniéndoles clases, intercalando las clases <i class="code">equis</i> y <i class="code">circulo</i>, al darle click; empecemos por quitar el código que teníamos y definir la variable<i class="code">turno</i> como <i class="code">"equis"</i>, así:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/js/main3.js"></pre>
+			</div>
+			<p>Ahora, lo que debe suceder al dar click a una casilla es que se le ponga una clase que será el valor de <i class="code">turno</i>; después le asignaremos estilos de css específicos a los elementos con estas clases.</p>
+			<p>Así quedaría <i class="code">/js/main.js</i></p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/js/main4.js"></pre>
+			</div>
+			<p>Y así quedaría <i class="code">/css/style.css</i></p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/css/style2.css"></pre>
+			</div>
+			<p>Y así está el juego en este momento:</p>
+			<iframe src="/resources/Kka1on142IOdi2/triqui9.html" frameborder="0"></iframe>
+			<p>En <i class="code">/js/main.js</i>, lo que hicimos fue que cada vez que le diéramos click a una casilla, después de asegurarnos con la función <i class="code">.classList.contains()</i> y con el operador lógico <i class="code">not (!)</i> de que no tenga ni la clase <i class="code">equis</i> ni la clase <i class="code">circulo</i>, con la función <i class="code">.classList.add()</i> le agregáramos como clase el valor de la variable <i class="code">turno</i> y luego de esto, si el valor de la variable <i class="code">turno</i> es <i class="code">"equis"</i>, lo cambiamos por <i class="code">"circulo"</i>, y si no, lo cambiamos por <i class="code">"equis"</i>. En <i class="code">/css/style.css</i>, escribimos estilos para todos los elementos con la clase <i>casilla</i> que además tengan la clase <i class="code">equis</i>, para que tengan un color de fondo rojo, y para los elementos con la clase <i>casilla</i> que además tengan la clase <i class="code">circulo</i> para que tengan un color de fondo azul.</p>
+			<p>No cambiemos el color de fondo, agreguémosle un <i class="code">pseudo-elemento</i> de html con css, usando <i class="code">:after</i>, así:</p>
+			<div class="parent">
+				<div class="stScroll">
+				    <div class="ensanchador"></div>
+				</div>
+				<pre data-src="/resources/Kka1on142IOdi2/css/style3.css"></pre>
+			</div>
+			<iframe src="/resources/Kka1on142IOdi2/triqui10.html" frameborder="0"></iframe>
+			<p>Primero, cambiamos algo del css de <i class="code">.casilla</i>, cambiamos el <i class="code">position</i> a <i class="code">relative</i>, el tamaño de fuente a <i class="code">25px</i> y la fuente a <i class="code">sans-serif</i>. Un <i class="code">pseudo-elemento</i> generado con <i class="code">:after</i> agrega html a un selector de css, <i class="code">content: "";</i> es el html que vas a agregar, <i class="code">text-align: -;</i> determina si como está el texto alineado horizontalmente, aquí lo centramos; <i class="code">width: -;</i> es el ancho, que va a ser 100% en este caso, para que se centre con respecto a todo el espacio horizontal disponible, y usemos <i class="code">display: -;</i>, en este caso <i class="code">inline-block</i> para que hagan efecto estos estilos; tendremos que usar <i class="code">position: absolute;</i> para poder centrar como queramos verticalmente, por eso usamos <i class="code">top: -;</i> y dimos con la cantidad <i class="code">-2px</i>, con respecto a la posición de la parte de arriba original.</p>
+				<p>...//</p>
 			<aside id="botones">
 					<button class="button" id="down" title="Download full source.">Download Source</button>
 					<button class="button" id="gith" title="View on GitHub"></button>
 				</aside>
-				<p>...//</p>
 				<p>**Texto de relleno con fras<a target= "_blank" href="https://slipsum.com/">es de Sam uel L. Jackson de pe</a>lículas</p>
 			<p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand? </p>
 <div class="parent">
